@@ -10,13 +10,13 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
 
   # use rsync to keep host in sync with guest VM
-  config.vm.synced_folder ".", "/sync", type: "rsync",
+  config.vm.synced_folder "../", "/sync", type: "rsync",
     rsync__exclude: [".git/","node_modules/"]
   # provision with docker and docker-compose
   config.vm.provision :docker
   # when running docker compose always rebuild and run
   config.vm.provision :docker_compose,
-    yml: "/sync/docker-compose.yaml",
+    yml: "/sync/gifr-base/docker-compose.yaml",
     rebuild: true,
     run: "always"
 

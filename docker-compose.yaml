@@ -1,17 +1,17 @@
-nginx:
-    build: ./gifr-nginx
+atatpnginx:
+    build: ../gifr-nginx
     links:
         - node:node
     ports:
         - "80:80"
 node:
-    build: ./gifr-node
+    build: ../gifr-node
     links:
         - redis
     ports:
         - "8080"
     volumes:
-        - ./gifr-node:/src
+        - ../gifr-node:/src
 redis:
     image: redis
     ports:

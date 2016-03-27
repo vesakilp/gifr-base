@@ -10,8 +10,6 @@ node:
   image: node
   links:
     - redis
-  ports:
-    - "8080:8080"
   target_num_containers: 1
 redis:
   image: redis
