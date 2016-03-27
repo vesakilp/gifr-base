@@ -1,0 +1,1 @@
+{"rsync":{"/sync":{"type":"rsync","rsync__exclude":[".git/","node_modules/"],"guestpath":"/sync","hostpath":"/Users/vesak/gifr","disabled":false,"__vagrantfile":true,"exclude":[".git/","node_modules/"],"owner":"vagrant","group":"vagrant"}}}
