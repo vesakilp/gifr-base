@@ -1,4 +1,4 @@
-atatpnginx:
+nginx:
     build: ../gifr-nginx
     image: gifr-nginx
     links:
