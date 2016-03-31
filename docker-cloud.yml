@@ -1,19 +1,19 @@
-gifr-nginx:
+nginx:
   image: vesakilp/gifr-nginx
   links:
-    - gifr-node
+    - node
   ports:
     - "80:80"
   roles:
     - global
-gifr-node:
+node:
   image: vesakilp/gifr-node
   links:
-    - gifr-redis
+    - redis
   target_num_containers: 1
   ports:
     - "8080"
-gifr-redis:
+redis:
   image: vesakilp/gifr-redis
   ports:
     - "6379"

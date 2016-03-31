@@ -1,13 +1,11 @@
 nginx:
     build: ../gifr-nginx
-    image: gifr-nginx
     links:
         - node:node
     ports:
         - "80:80"
 node:
     build: ../gifr-node
-    image: gifr-node
     links:
         - redis
     ports:
@@ -16,6 +14,5 @@ node:
         - ../gifr-node:/src
 redis:
     build: ../gifr-redis
-    image: gifr-redis
     ports:
         - "6379"
