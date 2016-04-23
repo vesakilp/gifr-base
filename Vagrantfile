@@ -25,5 +25,6 @@ Vagrant.configure("2") do |config|
   config.gatling.rsync_on_startup = false
 
   # forward ports
-  config.vm.network :forwarded_port, guest: 80, host: 80 # service
+  config.vm.network :forwarded_port, guest: 8443, host: 8443 # web page
+  #config.vm.network :forwarded_port, guest: 443, host: 8443 # api
 end

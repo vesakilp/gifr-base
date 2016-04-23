@@ -1,9 +1,9 @@
 nginx:
     build: ../gifr-nginx
     links:
-        - node:node
+        - node
     ports:
-        - "80:80"
+        - "8443:8443"
 node:
     build: ../gifr-node
     links:
